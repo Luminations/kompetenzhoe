@@ -1,14 +1,14 @@
 package com.company;
 
 
-public class Animal {
-    private int power;
-    private int population;
-    private int procreationPower;
+public abstract class Animal {
+    public int power;
+    public int population;
+    public int procreationPower;
 
     public Animal(){
-       setPopulation(0);
-       setProcreationPower(5);
+       population = 0;
+       procreationPower = 0;
     }
 
     public void fight(Animal animal){
@@ -33,27 +33,10 @@ public class Animal {
         population = population + procreationPower;
     }
 
-    public int getPower() {
-        return power;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
-    }
 
     public int getPopulation() {
         return population;
     }
 
-    public void setPopulation(int population) {
-        this.population = population;
-    }
 
-    public int getProcreationPower() {
-        return procreationPower;
-    }
-
-    public void setProcreationPower(int procreationPower) {
-        this.procreationPower = procreationPower;
-    }
 }
