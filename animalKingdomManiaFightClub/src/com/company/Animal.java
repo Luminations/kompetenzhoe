@@ -25,8 +25,6 @@ public class Animal {
             }
         }
     }
-
-	//Test
 	
     public void die(){
         this.population --;
