@@ -6,7 +6,9 @@ package com.company.Cyborgs.Reptiles;
 public class Crocodile extends Reptile{
 
     public Crocodile(){
-        population =20;
-        procreationPower= 3;
+        population = 200;
+        procreationPower= 10;
+        power = 3;
+        name = "Crocodile";
     }
 }

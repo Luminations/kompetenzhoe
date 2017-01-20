@@ -6,7 +6,10 @@ package com.company.Mamals;
 public class Lion extends Mammal{
 
     public Lion(){
-        population = 40;
-        procreationPower= 1;
+        population = 200;
+        procreationPower= 24;
+        power = 5;
+        name = "lion";
+
     }
 }
