@@ -6,11 +6,11 @@ public class Main {
         Game game = new Game();
         SudokuSolver sudokuSolver = new SudokuSolver();
 
-        sudokuSolver.SudokuValidat(game.puzzle);
+        sudokuSolver.SimpleSolveSudoku(game.unsolvedPuzzle);
+        System.out.println(sudokuSolver.SudokuValidat(game.unsolvedPuzzle));
 
-//        System.out.println(sudokuSolver.SudokuValidat(game.puzzle));
-//        System.out.println("\n" + sudokuSolver.SudokuValidat(game.puzzle));
+        game.PrintSudoku(game.unsolvedPuzzle);
 
-//        sudokuSolver.RandomSolve(game.temppuzzle);
+
     }
 }
