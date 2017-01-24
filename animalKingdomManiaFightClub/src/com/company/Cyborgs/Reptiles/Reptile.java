@@ -11,10 +11,12 @@ public abstract class Reptile extends Animal implements Cyborg {
 
     @Override
     public void exterminate(Animal animal) {
-        if (!animal.getClass().isAssignableFrom(Cyborg.class)){
-            animal.population = 0;
+
+
+        if (!Reptile.class.isAssignableFrom(animal.getClass())){
+            animal.health = 0;
         }else {
-            super.fight(animal);
+            super.Fight(animal);
         }
     }
 }

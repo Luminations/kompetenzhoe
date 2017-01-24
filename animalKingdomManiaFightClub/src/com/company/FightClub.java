@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.Cyborgs.Reptiles.Reptile;
+import com.company.Mamals.Mammal;
 
 import java.util.ArrayList;
 
@@ -10,56 +11,56 @@ import java.util.ArrayList;
 public class FightClub {
 
     public void FightclubNight(ArrayList<Animal> animals){
-        int aliveanimals = 0;
-
-        for (int n = 0; n< animals.size() ; n++){
-            animals.get(n).procreate();
-        }
-
-        for (int i = 0; i < animals.size(); i ++){
-            if (animals.get(i).population > 0){
-                aliveanimals ++;
-            }
-        }
-        while (aliveanimals > 1){
-            for (int i = 0; i < animals.size(); i++){
-                for (int j = 0; j < animals.size(); j++){
-
-                    if (animals.get(j).population > 0 && animals.get(i).population > 0){
-                        if (j != i){
-                            animals.get(j).procreate();
-                            animals.get(j).fight(animals.get(i));
-
-                            for (int n = 0; n< animals.size() ; n++){
-
-                                System.out.println(animals.get(n).population);
-                            }
-                                System.out.println("|||||||||||||||||||||||||||||||||||||");
-
-
-
-                        }
+        ArrayList<Animal> tempAnimals = animals;
+        for (int i = 0; i< tempAnimals.size(); i++){
+            for (int j = 0; j < tempAnimals.size(); j++){
+                if (i != j){
+                    if (Reptile.class.isAssignableFrom(tempAnimals.get(i).getClass())){
+                        Reptile reptile = (Reptile) tempAnimals.get(i);
+                        reptile.exterminate(tempAnimals.get(j));
+                        System.out.println(tempAnimals.get(j).name + " now has " + tempAnimals.get(j).health +  " health");
+                    }else {
+                        tempAnimals.get(i).Fight(tempAnimals.get(j));
+                        System.out.println(tempAnimals.get(j).name + " now has " + tempAnimals.get(j).health + " health");
                     }
                 }
             }
+        }
+    }
 
+    public void MamalFighting(ArrayList<Animal> animals){
+        ArrayList<Animal> tempMamalsAnimals = new ArrayList<>();
+        for(int i = 0; i< animals.size();i++){
+            if (Mammal.class.isAssignableFrom(animals.get(i).getClass())){
+                tempMamalsAnimals.add(animals.get(i));
+            }
+        }
 
-            System.out.println("----------------------");
-
-            aliveanimals = 0;
-            for (int i = 0; i < animals.size(); i ++){
-                if (animals.get(i).population > 0){
-                    aliveanimals ++;
+        for (int i = 0;i<tempMamalsAnimals.size(); i++){
+            for (int j = 0; j<tempMamalsAnimals.size();j++){
+                if (i != j){
+                    tempMamalsAnimals.get(i).Fight(animals.get(j));
+                    System.out.println(tempMamalsAnimals.get(j).name + "now has" + tempMamalsAnimals.get(j).health + "health");
                 }
             }
         }
-        for (int i = 0; i< animals.size(); i++){
-            if (animals.get(i).population > 0){
-                System.out.println(animals.get(i).name + " Won!!!!");
+    }
+
+    public void ReptileFighting(ArrayList<Animal> animals){
+        ArrayList<Animal> tempReptilesAnimals = new ArrayList<>();
+        for(int i = 0; i< animals.size();i++){
+            if (Reptile.class.isAssignableFrom(animals.get(i).getClass())){
+                tempReptilesAnimals.add(animals.get(i));
             }
         }
 
-
-
+        for (int i = 0;i<tempReptilesAnimals.size(); i++){
+            for (int j = 0; j<tempReptilesAnimals.size();j++){
+                if (i != j){
+                    tempReptilesAnimals.get(i).Fight(animals.get(j));
+                    System.out.println(tempReptilesAnimals.get(j).name + "now has" + tempReptilesAnimals.get(j).health + "health");
+                }
+            }
+        }
     }
 }

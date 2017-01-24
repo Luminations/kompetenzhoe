@@ -3,31 +3,25 @@ package com.company;
 
 public abstract class Animal {
     public int power;
-    public int population;
-    public int procreationPower;
+    public int health;
+    public int regenerationRate;
     public String name;
 
     public Animal(){
-       population = 0;
-       procreationPower = 0;
+       health = 0;
+       regenerationRate = 0;
         name = "default name";
     }
 
-    public void fight(Animal animal){
-        if (animal.population > 0){
+    public void Fight(Animal animal){
+        if (animal.health > 0){
 
-            animal.population = animal.population - this.power * this.population;
+            animal.health = animal.health - this.power;
         }
     }
 	
-    public void procreate(){
-        population = population + (procreationPower * (population));
+    public void Regenerate(){
+        health = health + regenerationRate;
     }
-
-
-    public int getPopulation() {
-        return population;
-    }
-
 
 }

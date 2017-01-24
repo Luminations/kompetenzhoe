@@ -6,8 +6,8 @@ package com.company.Mamals;
 public class Lion extends Mammal{
 
     public Lion(){
-        population = 200;
-        procreationPower= 24;
+        health = 200;
+        regenerationRate = 24;
         power = 5;
         name = "lion";
 

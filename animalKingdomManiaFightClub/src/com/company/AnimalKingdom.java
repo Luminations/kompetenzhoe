@@ -22,6 +22,7 @@ public class AnimalKingdom {
         animals.add(new Iguana());
 
         fightClub.FightclubNight(animals);
+        fightClub.MamalFighting(animals);
 
 
 

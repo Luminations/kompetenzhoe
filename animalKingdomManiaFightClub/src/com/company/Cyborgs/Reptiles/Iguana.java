@@ -6,8 +6,8 @@ package com.company.Cyborgs.Reptiles;
 public class Iguana extends Reptile{
 
     public Iguana(){
-        population = 200;
-        procreationPower= 17;
+        health = 200;
+        regenerationRate = 17;
         power = 2;
         name = "Iguana";
 
