@@ -60,14 +60,6 @@ public class Validator {
             return false;
         }
 
-        for (int x = 0; x < 9; x++){
-            for (int y = 0; y < 9; y++){
-                if (puzzle[x][y] null){
-
-                }
-            }
-        }
-
 
         //check if the all horizontal lines contain all different numbers and no duplicates except zero
         for (int x=0; x< 9; x++){

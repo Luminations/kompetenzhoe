@@ -90,9 +90,4 @@ public class SudokuSolver {
         }
         return tempPuzzle;
     }
-
-    //a method to validate the sudoku puzzle
-
-
-
 }
