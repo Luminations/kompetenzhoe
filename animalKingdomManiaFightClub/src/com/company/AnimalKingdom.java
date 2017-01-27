@@ -22,8 +22,6 @@ public class AnimalKingdom {
         animals.add(new Crocodile());
         animals.add(new RedPanda());
 
-
-
         Scanner reader = new Scanner(System.in);
 
         boolean notFinito = true;
@@ -47,27 +45,6 @@ public class AnimalKingdom {
                 System.out.println("invalid input");
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
 
