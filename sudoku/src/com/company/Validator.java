@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Validator {
 
+    //validates a given sudoku on wether or not it is korrectly solved
     public boolean SudokuValidat(int[][] puzzle){
 
         //check if the all horizontal lines contain all different numbers and no duplicates
@@ -54,6 +55,7 @@ public class Validator {
         return true;
     }
 
+    //validates a given sudoku on wether or not it is illieagel without consern for fields beeing 0
     public boolean PossiblePuzzleValidate(int[][] puzzle){
 
         if (puzzle.length != 9){
