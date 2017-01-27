@@ -29,36 +29,25 @@ public class FightClub {
     }
 
     public void MamalFighting(ArrayList<Animal> animals){
-        ArrayList<Animal> tempMamalsAnimals = new ArrayList<>();
-        for(int i = 0; i< animals.size();i++){
-            if (Mammal.class.isAssignableFrom(animals.get(i).getClass())){
-                tempMamalsAnimals.add(animals.get(i));
-            }
-        }
 
-        for (int i = 0;i<tempMamalsAnimals.size(); i++){
-            for (int j = 0; j<tempMamalsAnimals.size();j++){
-                if (i != j){
-                    tempMamalsAnimals.get(i).Fight(animals.get(j));
-                    System.out.println(tempMamalsAnimals.get(j).name + "now has" + tempMamalsAnimals.get(j).health + "health");
+        for (int i = 0;i<animals.size(); i++){
+            for (int j = 0; j<animals.size();j++){
+                if (i != j && Mammal.class.isAssignableFrom(animals.get(i).getClass()) && Mammal.class.isAssignableFrom(animals.get(j).getClass())){
+                    animals.get(i).Fight(animals.get(j));
+                    System.out.println(animals.get(j).name + " now has " + animals.get(j).health + " health");
                 }
             }
         }
     }
 
     public void ReptileFighting(ArrayList<Animal> animals){
-        ArrayList<Animal> tempReptilesAnimals = new ArrayList<>();
-        for(int i = 0; i< animals.size();i++){
-            if (Reptile.class.isAssignableFrom(animals.get(i).getClass())){
-                tempReptilesAnimals.add(animals.get(i));
-            }
-        }
 
-        for (int i = 0;i<tempReptilesAnimals.size(); i++){
-            for (int j = 0; j<tempReptilesAnimals.size();j++){
-                if (i != j){
-                    tempReptilesAnimals.get(i).Fight(animals.get(j));
-                    System.out.println(tempReptilesAnimals.get(j).name + "now has" + tempReptilesAnimals.get(j).health + "health");
+
+        for (int i = 0;i<animals.size(); i++){
+            for (int j = 0; j<animals.size();j++){
+                if (i != j && Reptile.class.isAssignableFrom(animals.get(i).getClass()) && Reptile.class.isAssignableFrom(animals.get(j).getClass())){
+                    animals.get(i).Fight(animals.get(j));
+                    System.out.println(animals.get(j).name + " now has " + animals.get(j).health + " health");
                 }
             }
         }

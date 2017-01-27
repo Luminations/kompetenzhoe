@@ -6,9 +6,5 @@ public class Main {
         Game game = new Game();
         SudokuSolver sudokuSolver = new SudokuSolver();
         Validator validator = new Validator();
-
-
-
-
     }
 }

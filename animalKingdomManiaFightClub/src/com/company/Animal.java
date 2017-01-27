@@ -14,10 +14,7 @@ public abstract class Animal {
     }
 
     public void Fight(Animal animal){
-        if (animal.health > 0){
-
             animal.health = animal.health - this.power;
-        }
     }
 	
     public void Regenerate(){
