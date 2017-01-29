@@ -4,24 +4,13 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.util.logging.FileHandler;
 
-/**
- * Created by fraser on 1/28/17.
- */
 public class SaverLoader {
 
+    //Saves a SudokuPuzzle ŵith the given name
+    public void Save(String path, SudokuPuzzle sudokuPuzzle) {
 
-
-    public void Save(String path, SudokuPuzzle sudokuPuzzle){
-
-//        JsonObject obj = new JsonObject();
         Gson gson = new Gson();
-
-//        obj.addProperty("puzzle", gson.toJson(sudokuPuzzle));
-
-
         File file = new File(path);
 
         try {
@@ -34,11 +23,8 @@ public class SaverLoader {
             byte[] contentInBytes = gson.toJson(sudokuPuzzle).getBytes();
 
             fileOutputStream.write(contentInBytes);
-
-
             fileOutputStream.flush();
             fileOutputStream.close();
-            System.out.println("gg");
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -47,9 +33,8 @@ public class SaverLoader {
         }
 
     }
-
-
-    public SudokuPuzzle Load(String path){
+    //Loadas a SudokuPuzzle ŵith the given name
+    public SudokuPuzzle Load(String path) {
         JsonObject obj = new JsonObject();
         Gson gson = new Gson();
 
@@ -66,7 +51,7 @@ public class SaverLoader {
             }
 
 
-          SudokuPuzzle sudokuPuzzle = gson.fromJson(string, SudokuPuzzle.class);
+            SudokuPuzzle sudokuPuzzle = gson.fromJson(string, SudokuPuzzle.class);
 
             return sudokuPuzzle;
 
@@ -75,7 +60,6 @@ public class SaverLoader {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
 
 
         return null;
