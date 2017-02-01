@@ -113,7 +113,7 @@ public class Main {
                 }
                 String input = reader.next();
                 if (isInteger(input)) {
-                    int index = Integer.parseInt(string);
+                    int index = Integer.parseInt(input);
                     if (index > game.sudokuPuzzles.size() - 1 || index < 0) {
                         System.out.println("index does not match with id's");
                     } else {
@@ -130,9 +130,7 @@ public class Main {
                 System.out.println("invalid input");
             }
         }
-        game.PrintSudoku(saverLoader.Load("test.json").puzzle);
-
-
+        System.out.println("by by");
     }
 
     //a simple method to determen if a string is a integer

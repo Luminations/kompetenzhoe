@@ -1,7 +1,7 @@
 package com.company;
 
 /**
- * a supposed to represent wild animals
+ * is supposed to represent wild animals
  */
 public abstract class Animal {
     public int power;
