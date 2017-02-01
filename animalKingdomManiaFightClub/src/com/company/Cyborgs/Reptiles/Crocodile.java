@@ -5,6 +5,9 @@ package com.company.Cyborgs.Reptiles;
  */
 public class Crocodile extends Reptile{
 
+    /**
+     * sets variable to custom variables according to Crocodile statistics
+     */
     public Crocodile(){
         health = 200;
         regenerationRate = 10;

@@ -54,7 +54,7 @@ public class FightClubTest {
             if (Mammal.class.isAssignableFrom(animals.get(i).getClass())){
                 Assert.assertTrue(healths.get(i) > animals.get(i).health);
             }else {
-                Assert.assertTrue(healths.get(i) != animals.get(i).health);
+                Assert.assertTrue(healths.get(i) == animals.get(i).health);
             }
         }
 

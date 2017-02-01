@@ -136,7 +136,7 @@ public class Main {
     }
 
     //a simple method to determen if a string is a integer
-    public static boolean isInteger(String str) {
+    private static boolean isInteger(String str) {
         try {
             int i = Integer.parseInt(str);
         } catch (NumberFormatException nfe) {
